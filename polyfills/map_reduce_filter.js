@@ -21,6 +21,9 @@ const newarr = arr.map((num, index, arr) => {
   polyfill for map
 */
 Array.prototype.myMap = function (callback) {
+        if(typeof callback !=='function'){
+            throw new TypeError("can call myMap only on arrray")
+        }
       let result = [];
       for (let i = 0; i < this.length; i++) {
             if (this.hasOwnProperty(i)) {    //=> to handle array like [1,,3] undefined due to a hole
@@ -60,6 +63,11 @@ POLYFILLL
 
 
 Array.prototype.myFilter = function (callback) {
+
+      
+        if(typeof callback !=='function'){
+            throw new TypeError("can call myFilter only on arrray")
+        }
       let result = [];
 
       for (let i = 0; i < this.length; i++) {
@@ -96,7 +104,11 @@ Polyfill
 
 */
 
-Array.prototype.myReduce = function (callback, initial = 0) {
+Array.prototype.myReduce = function (callback, initial ) {
+      
+        if(typeof callback !=='function'){
+            throw new TypeError("can caLL myrduce only on arrray")
+        }
 
       let acco;
       let i = 0;
