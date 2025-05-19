@@ -150,3 +150,49 @@ const data = users.reduce((obj, user) => {
 }, {});
 
 console.log(data); // { admin: [ 'Alice', 'Charlie' ], user: [ 'Bob' ] }
+
+
+//Compare Two Objects Deeply
+
+const deepEqual = (a,b)=>{
+    if(a===b) return true ;
+    if(typeof a !== 'object' || typeof b!='object' || a===null || b===null) return false;
+    const keys1 = Object.keys(a);
+    const keys2 = Object.keys(b);
+    if(keys1.length !== keys2.length)  return false
+    
+    keys1.forEach((key)=>{
+      if(!b[key]){
+        return false;
+      }
+
+       if(!deepEqual(a[key],b[key])) return false;
+     
+    })
+
+    return true;
+}
+
+const a = {
+  name: "Alice",
+  address: {
+    city: "New York",
+    zip: 10001
+  }
+};
+
+const b = {
+  name: "Alice",
+  address: {
+    city: "New York",
+    zip: 10001
+  }
+};
+
+let ans = deepEqual(a, b); 
+
+
+
+
+
+

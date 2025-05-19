@@ -6,7 +6,6 @@
 
   const throttle = (func,delay)=>{
     let timer = 0;
-
     return function(...args){
       const current =  Date.now();
         if(current-timer>=delay || timer ==0){
