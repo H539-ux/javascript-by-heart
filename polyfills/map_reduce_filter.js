@@ -138,4 +138,3 @@ const myData = arr.myReduce((initial, num, index, arr) => {
       return initial * num;
 }, 1)
 
-console.log(myData)
