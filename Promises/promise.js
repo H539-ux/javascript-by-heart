@@ -1,7 +1,4 @@
 
-
-
-
 function getData(id) {
    
   return new Promise((resolve, reject) => {
@@ -15,8 +12,6 @@ function getData(id) {
           }
   })
 }
-
-
 
 const userData = getData(4)
 userData.then((data)=>{
