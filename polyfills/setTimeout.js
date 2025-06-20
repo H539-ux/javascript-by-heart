@@ -38,6 +38,8 @@ function myClearTimeout(timer) {
 }
 
 const timer = mySetTimeout(fun, 2000, "harshal", 23);
+const timer1 = mySetTimeout(fun, 3000, "harshal1", 23);
+const timer2 = mySetTimeout(fun, 4000, "harshal2", 23);
 
 function fun(name, age) {
   console.log(name, age);
